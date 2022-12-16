@@ -35,7 +35,8 @@ class MyPanel(wx.Frame):
 
     def bilder(self, ToolName):
         Tool = "".join(ToolName.split())
-        sys.path.insert(0, "Tools\\" + Tool)
+        sys.path.insert(0, "Tools/" + Tool)
+        #todo чи працює на вінді  "Tools/" + Tool, бо там було  "Tools\\" + Tool
         command = "import " + Tool + "\n" + Tool + "." + Tool + "()"
         exec(command)
 
